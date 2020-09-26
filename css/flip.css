@@ -24,6 +24,8 @@
     -webkit-transition: all 600ms;
     transition: all 600ms;
     z-index: 20;
+    /*border-radius: 20%;*/
+
 }
 
     .card div {
@@ -36,6 +38,9 @@
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         border-radius: 2px;
+        border:solid darkblue 0px;
+        /*border-radius: 20%;*/
+       
     }
 
     .card .back {
@@ -45,20 +50,40 @@
         transform: rotateX(180deg);
     }
 
+    .info-card{
+        -webkit-transform: rotateX(180deg);
+        transform: rotateX(180deg);
+        position: relative; 
+        left:120%;
+        top:50%;
+        width: 300%;
+        display: none;
+        font-weight: bold;
+        font-size: large;
+        color: black;
+    }
+
 label:hover .card {
-    -webkit-transform: rotateX(20deg);
-    transform: rotateX(20deg);
+    -webkit-transform: rotateX(30deg);
+    transform: rotateX(30deg);
     box-shadow: 0 20px 20px rgba(50,50,50,.2);
 }
 
 
-:checked + .card {
+:checked + .card  {
     transform: rotateX(180deg);
     -webkit-transform: rotateX(180deg);
+    
+    
+
 }
+input[type=checkbox]:checked + div p {
+    display: inline;
+  }
+
 
 label:hover :checked + .card {
-    transform: rotateX(160deg);
-    -webkit-transform: rotateX(160deg);
+    transform: rotateX(150deg);
+    -webkit-transform: rotateX(150deg);
     box-shadow: 0 20px 20px rgba(255,255,255,.2);
 }
